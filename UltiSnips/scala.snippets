@@ -1,0 +1,30 @@
+priority -50
+
+
+snippet main "main method" b
+def main(args: Array[String]): ${1:T} = {
+	${0:}
+}
+endsnippet
+
+snippet obje "object extends" b
+object ${1:name} ${2}${3: extends }${4: with} ${5:} {
+	${0}
+}
+endsnippet
+
+snippet objn "object no extends" b
+object ${1:name} {
+	${0}
+}
+endsnippet
+
+snippet val "constant definition" b
+val ${1:name}: ${2:T} = ${0:value}
+endsnippet
+
+snippet var "variable definition" b
+var ${1:name}: ${2:T} = ${0:value}
+endsnippet
+
+# vim:ft=snippets:
