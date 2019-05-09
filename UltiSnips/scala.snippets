@@ -2,20 +2,22 @@ priority -50
 
 
 snippet main "main method" b
-def main(args: Array[String]): ${1:T} = {
-	${0:}
+object ${1:`!v expand('%:t:r') ==# '' ? 'HelloWorld' : expand('%:t:r')`} {
+	def main(args: Array[String]): ${2:T} = {
+		$0${VISUAL}
+	}
 }
 endsnippet
 
 snippet obje "object extends" b
 object ${1:name} ${2}${3: extends }${4: with} ${5:} {
-	${0}
+	$0${VISUAL}
 }
 endsnippet
 
 snippet objn "object no extends" b
 object ${1:name} {
-	${0}
+	$0${VISUAL}
 }
 endsnippet
 
@@ -26,5 +28,6 @@ endsnippet
 snippet var "variable definition" b
 var ${1:name}: ${2:T} = ${0:value}
 endsnippet
+
 
 # vim:ft=snippets:

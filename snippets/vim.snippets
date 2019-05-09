@@ -8,7 +8,7 @@ snippet guard script reload guard
 		finish
 	endif
 	let $1 = 1${0}
-snippet f function
+snippet f autoload function
 	function! ${1:`expand('%') =~ 'autoload' ? substitute(matchstr(expand('%:p'),'autoload/\zs.*\ze.vim'),'[/\\]','#','g').'#' : ''`}${2:function_name}(${3}) abort
 		${0}
 	endfunction
@@ -42,9 +42,9 @@ snippet ife if ... else statement
 		${0}
 	endif
 snippet au augroup ... autocmd block
-	augroup ${1:AU_NAME}
-		" this one is which you're most likely to use?
-		autocmd ${2:BufRead,BufNewFile} ${3:*.ext,*.ext3|<buffer[=N]>} ${0}
+	augroup ${1:augroup_name}
+    autocmd!
+		auto ${0:event}
 	augroup END
 snippet bun Vundle.vim Plugin definition
 	Plugin '${0}'

@@ -101,10 +101,6 @@ snippet rec
 #curried method
 snippet crdef
 	def ${1:name}(${2:arg})(${3:arg}) = ${0:}
-#main method
-#check validity of T
-snippet main
-	def main(args: Array[String]):${1:T} = ${0:}
 ############################
 # basic types(general purpose)
 # you might want to use basic types snippets
@@ -248,9 +244,9 @@ snippet spl
 	${1:name}.split("${0:,}")
 #end
 snippet val
-	val ${1:name}${2:: T} = ${0:value}
+	val ${1:name}: ${2:T} = ${0:value}
 snippet var
-	var ${1:name}${2:: T} = ${0:value}
+	var ${1:name}: ${2:T} = ${0:value}
 ############################
 # classes
 #
@@ -275,9 +271,6 @@ snippet class
 		${5:override def toString = "$1"}
 		${0}
 	}
-#object
-snippet object
-	object ${1:name}${2:(arg)}${3: extends }${4: with} ${0:}
 #trait
 snippet trait
 	trait ${1:name}${2: extends }${3: with} {
