@@ -16,10 +16,23 @@ endif
 let $1 = 1$3
 endsnippet
 
-
 snippet fun "function" b
 function! ${1:function_name}($2) abort
 	${3:}
 endfunction
+endsnippet
+
+snippet fm "fold marker" b
+" ${1} {{{
+	$0
+" }}}
+endsnippet
+
+snippet fmk "fold marker {{{" w
+" ${0}{{{
+endsnippet
+
+snippet fmj "fold marker }}}" w
+" }}}
 endsnippet
 # vim:ft=snippets:
