@@ -18,11 +18,11 @@ snippet sbash
 	IFS=$'\n\t'
 
 snippet if
-	if [[ ${1:condition} ]]; then
+	if [ ${1:condition} ]; then
 		${0:${VISUAL}}
 	fi
 snippet elif
-	elif [[ ${1:condition} ]]; then
+	elif [ ${1:condition} ]; then
 		${0:${VISUAL}}
 snippet for
 	for (( ${2:i} = 0; $2 < ${1:count}; $2++ )); do
