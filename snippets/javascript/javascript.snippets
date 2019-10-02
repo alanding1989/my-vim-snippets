@@ -5,11 +5,11 @@ snippet proto
 		${0:${VISUAL}}
 	};
 # Function
-snippet fun "function"
+snippet fn "function"
 	function ${1:function_name}(${2}) {
 		${0:${VISUAL}}
 	}
-snippet fun "async function"
+snippet afn "async function"
 	async function ${1:function_name}(${2}) {
 		${0:${VISUAL}}
 	}
@@ -282,7 +282,7 @@ snippet timeout
 	setTimeout(function () {${0}}${2}, ${1:10});
 snippet const
 	const ${1} = ${0};
-snippet let
+snippet le
 	let ${1} = ${0};
 snippet im "import xyz from 'xyz'"
 	import ${1} from '${2:$1}';
@@ -308,7 +308,7 @@ snippet foro "for (const prop of object}) { ... }"
 	for (const ${1:prop} of ${2:object}) {
 		${0:$1}
 	}
-snippet fun*
+snippet fn*
 	function* ${1:function_name}(${2}) {
 		${0:${VISUAL}}
 	}

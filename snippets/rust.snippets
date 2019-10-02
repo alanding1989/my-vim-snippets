@@ -38,9 +38,9 @@ snippet pri "print!"
 	print!("${1}");
 snippet pri, "print! with format param"
 	print!("${1}{${2}}", ${3});
-snippet pln "println!"
+snippet prl "println!"
 	println!("${1}");
-snippet pln, "println! with format param"
+snippet prf "println! with format param"
 	println!("${1}{${2}}", ${3});
 snippet fmt "format!"
 	format!("${1}{${2}}", ${3});
@@ -138,7 +138,7 @@ snippet wh "while loop"
 	while ${1:condition} {
 		${0:${VISUAL}}
 	}
-snippet for "for ... in ... loop"
+snippet fori "for ... in ... loop"
 	for ${1:i} in ${2} {
 		${0}
 	}
