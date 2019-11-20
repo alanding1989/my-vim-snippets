@@ -426,10 +426,22 @@ snippet th "throw" b
 throw new $0
 endsnippet
 
-snippet wh "while" b
+snippet whi "while" b
 while ($1)`!p nl(snip)`{
 	$0
 }
+endsnippet
+
+snippet le "definition" wb
+${1:Type} ${2:name} = ${0:value}
+endsnippet
+
+snippet va "reAssignment" wb
+${1:name} = ${0:value}
+endsnippet
+
+snippet new "creat new object" b
+${1:Type} ${2:name} = new ${0:value}();
 endsnippet
 
 # vim:ft=snippets:

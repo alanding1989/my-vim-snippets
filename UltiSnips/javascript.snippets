@@ -57,7 +57,7 @@ ${1:class_name}.prototype.${2:method_name} = function`!p snip.rv = space_before_
 endsnippet
 
 snippet fn "function (named)" b
-function ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2:argument}) {
+function ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2}) {
 	${VISUAL}$0
 }
 endsnippet
@@ -70,7 +70,7 @@ endsnippet
 
 # Drop priority so this only triggers when not beginning of line.
 priority -51
-snippet lam "function (anonymous)" w
+snippet anf "function (anonymous)" w
 function`!p snip.rv = space_before_function_paren(snip)`($1) {
 	${VISUAL}$0
 }$2
@@ -79,6 +79,12 @@ priority -50
 
 snippet anf "function (anonymous)" i
 function`!p snip.rv = space_before_function_paren(snip)`($1) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet lam "() => function" i
+(${1}) => {
 	${VISUAL}$0
 }
 endsnippet

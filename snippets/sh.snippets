@@ -95,12 +95,12 @@ snippet getopt
 snippet root
 	if [ \$(id -u) -ne 0 ]; then exec sudo \$0; fi
 
-snippet fun-sh
+snippet fn-sh
 	${1:function_name}() {
-		${0:#function_body}
+		${0}
 	}
 
-snippet fun
+snippet fn
 	function ${1:function_name}() {
-		${0:#function_body}
+		${0}
 	}

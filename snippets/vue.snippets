@@ -9,27 +9,33 @@ extends html, javascript, css
 # some html-like snippets
 
 snippet slot
-	<slot></slot>
+	<slot>
+			${0}
+	</slot>
 
 snippet template
-	<template></template>
+	<template>
+			${0}
+	</template>
 
 snippet transition
-	<transition></transition>
+	<transition>
+			${0}
+	</transition>
 
 # The following snippets create more complex boilerplate code.
 
 snippet vbase
 	<template>
-		<div>
-
-		</div>
+			<div ${0}>
+					${0}
+			</div>
 	</template>
 
 	<script>
-		export default{
-			${0}
-		}
+			export default{
+					${0}
+			}
 	</script>
 
 	<style scoped>
